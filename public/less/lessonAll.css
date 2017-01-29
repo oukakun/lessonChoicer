@@ -8,6 +8,9 @@
   background-color: #54555a;
   padding-top: 20px;
   box-shadow: 2px 2px 8px #ccc;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 .sidebar .title {
   height: 135px;
