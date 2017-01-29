@@ -1,0 +1,125 @@
+.index_content {
+    margin: 20px 0 0 200px;
+    height: 1000px;
+    .my_lesson,
+    .my_lessonList,
+    .my_test {
+        margin: 20px;
+    }
+    // 我的课表
+    .my_lesson,
+    .my_lessonList,
+    .my_test {
+        height: auto;
+        box-shadow: -2px 5px 15px 5px #CFCFCF;
+        .lesson_head {
+            height: 62px;
+            background-color: #54555A;
+            position: relative;
+            padding: 6px 40px;
+            i {
+                position: absolute;
+                left: 15px;
+                top: 8px;
+                color: #fff;
+                font-size: 20px;
+            }
+            h2 {
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+    }
+    .my_lesson {
+        .lesson_body {
+            height: auto;
+            width: 100%;
+            table {
+                width: 100%;
+                thead {
+                    th {
+                        height: 32px;
+                        line-height: 30px;
+                        font: 600 16px 微软雅黑;
+                        border-right: 2px solid #eee;
+                        border-bottom: 2px solid #eee;
+                        &:nth-child(1) {
+                            width: 167px;
+                        }
+                    }
+                }
+                tbody {
+                    td {
+                        height: 40px;
+                        border-right: 2px solid #eee;
+                        border-bottom: 2px solid #eee;
+                        text-align: center;
+                        font-size: 16px;
+                        &:nth-child(1) {
+                            width: 167px;
+                        }
+                    }
+                    td[line="4"],
+                    td[line="9"] {
+                        border-bottom: 2px solid #000;
+                    }
+                }
+            }
+        }
+    }
+    // 课程清单
+    .my_lessonList {
+        .lesson_head {
+            height: 42px;
+        }
+        .lesson_body {
+            table {
+                width: 100%;
+                thead {
+                    th {
+                        padding: 5px 20px;
+                        font-size: 16px;
+                    }
+                }
+                tbody {
+                    td {
+                        padding: 5px 20px;
+                        text-align: center;
+                        font-size: 16px;
+                        border-bottom: 2px solid #eee;
+                    }
+                }
+            }
+            .allScore {
+                padding: 5px 20px;
+                font-size: 16px;
+            }
+        }
+    }
+    // 考试时间
+    .my_test {
+        .lesson_head {
+            height: 42px;
+        }
+        .lesson_body {
+            table {
+                width: 100%;
+                thead {
+                    th {
+                        padding: 5px 75px;
+                        height: 31px;
+                        font-size: 16px;
+                    }
+                }
+                tbody {
+                    td {
+                        padding: 5px 75px;
+                        height: 31px;
+                        text-align: center;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

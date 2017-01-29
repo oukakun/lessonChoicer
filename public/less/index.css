@@ -1,0 +1,106 @@
+.index_content {
+  margin: 20px 0 0 200px;
+  height: 1000px;
+}
+.index_content .my_lesson,
+.index_content .my_lessonList,
+.index_content .my_test {
+  margin: 20px;
+}
+.index_content .my_lesson,
+.index_content .my_lessonList,
+.index_content .my_test {
+  height: auto;
+  box-shadow: -2px 5px 15px 5px #CFCFCF;
+}
+.index_content .my_lesson .lesson_head,
+.index_content .my_lessonList .lesson_head,
+.index_content .my_test .lesson_head {
+  height: 62px;
+  background-color: #54555A;
+  position: relative;
+  padding: 6px 40px;
+}
+.index_content .my_lesson .lesson_head i,
+.index_content .my_lessonList .lesson_head i,
+.index_content .my_test .lesson_head i {
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  color: #fff;
+  font-size: 20px;
+}
+.index_content .my_lesson .lesson_head h2,
+.index_content .my_lessonList .lesson_head h2,
+.index_content .my_test .lesson_head h2 {
+  color: #fff;
+  font-size: 20px;
+}
+.index_content .my_lesson .lesson_body {
+  height: auto;
+  width: 100%;
+}
+.index_content .my_lesson .lesson_body table {
+  width: 100%;
+}
+.index_content .my_lesson .lesson_body table thead th {
+  height: 32px;
+  line-height: 30px;
+  font: 600 16px 微软雅黑;
+  border-right: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+}
+.index_content .my_lesson .lesson_body table thead th:nth-child(1) {
+  width: 167px;
+}
+.index_content .my_lesson .lesson_body table tbody td {
+  height: 40px;
+  border-right: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+  text-align: center;
+  font-size: 16px;
+}
+.index_content .my_lesson .lesson_body table tbody td:nth-child(1) {
+  width: 167px;
+}
+.index_content .my_lesson .lesson_body table tbody td[line="4"],
+.index_content .my_lesson .lesson_body table tbody td[line="9"] {
+  border-bottom: 2px solid #000;
+}
+.index_content .my_lessonList .lesson_head {
+  height: 42px;
+}
+.index_content .my_lessonList .lesson_body table {
+  width: 100%;
+}
+.index_content .my_lessonList .lesson_body table thead th {
+  padding: 5px 20px;
+  font-size: 16px;
+}
+.index_content .my_lessonList .lesson_body table tbody td {
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 16px;
+  border-bottom: 2px solid #eee;
+}
+.index_content .my_lessonList .lesson_body .allScore {
+  padding: 5px 20px;
+  font-size: 16px;
+}
+.index_content .my_test .lesson_head {
+  height: 42px;
+}
+.index_content .my_test .lesson_body table {
+  width: 100%;
+}
+.index_content .my_test .lesson_body table thead th {
+  padding: 5px 75px;
+  height: 31px;
+  font-size: 16px;
+}
+.index_content .my_test .lesson_body table tbody td {
+  padding: 5px 75px;
+  height: 31px;
+  text-align: center;
+  font-size: 16px;
+}
