@@ -41,7 +41,7 @@
   padding: 20px 0 0 200px;
 }
 .alllesson .lessonInfo {
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: 0 20px;
 }
 .alllesson .lessonInfo .table-name {
@@ -54,16 +54,34 @@
 }
 .alllesson .lessonInfo table td {
   padding: 5px;
-  height: 50px;
   text-align: center;
-  font-size: 12px;
+}
+.alllesson .lessonInfo table td .update {
+  color: #fff;
+  border-radius: 4px;
+  height: 26px;
+  width: 75pt;
+  font-size: 18px;
   cursor: pointer;
+  outline: 0;
+  box-sizing: border-box;
+  border: none;
+  font-size: 15px;
+}
+.alllesson .lessonInfo table td .add {
+  background-color: #aaa;
+}
+.alllesson .lessonInfo table td .remove {
+  background-color: #df3e3e;
+}
+.alllesson .lessonInfo table td .copy {
+  background-color: #6cf;
+}
+.alllesson .lessonInfo table td .remove:hover,
+.alllesson .lessonInfo table td .copy:hover {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .alllesson .lessonInfo table thead td {
-  font-weight: 700;
-  font-size: 16px;
-}
-.alllesson .lessonInfo table thead:hover,
-.alllesson .lessonInfo table tr:hover {
-  background-color: #ddd;
+  color: #fff;
+  background-color: #54555a;
 }
