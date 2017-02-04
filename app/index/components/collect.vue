@@ -1,38 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>收藏页面</title>
-    <link rel="stylesheet" href="../public/less/base.css">
-    <link rel="stylesheet" href="../public/less/collect.css">
-    <link rel="stylesheet" href="../public/assets/font-awesome-4.7.0/css/font-awesome.min.css">
-</head>
-
-<body>
-    <!--侧边导航栏部分-->
-    <div class="sidebar">
-        <img src="../public/images/logo.png" alt="">
-        <h2 class="title">复旦选课助手</h2>
-        <ul class="nav">
-            <li class="">
-                <i class="fa fa-table fl"></i>
-                <a href="javascript:;" class="navName">我的课表</a>
-            </li>
-            <li class="active">
-                <i class="fa fa-star-o fl"></i>
-                <a href="./collect.html" class="navName active">收藏夹</a>
-            </li>
-            <li>
-                <i class="fa fa-search fl"></i>
-                <a href="javascript:;" class="navName">搜索</a>
-            </li>
-            <li>
-                <i class="fa fa-list-alt fl"></i>
-                <a href="./LessonAll.html" class="navName">所有课程</a>
-            </li>
-        </ul>
-    </div>
+<template>
     <!--收藏表单部分-->
     <div class="alllesson">
         <div class="lessonInfo">
@@ -123,6 +89,4 @@
             </table>
         </div>
     </div>
-</body>
-
-</html>
+</template>
