@@ -20,7 +20,6 @@ module.exports = {
         }
     },
     module: {
-
         loaders: [
             // 使用vue-loader 加载 .vue 结尾的文件
             {
@@ -33,6 +32,9 @@ module.exports = {
                 exclude: /node_modules/
             }
         ]
+    },
+    babel: {
+        presets: ['es2015']
     },
     Favlist: {
         loaders: {
