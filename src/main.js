@@ -1,14 +1,16 @@
-import Vue from 'vue'
-import sideBar from './components/sideBar'
+import Vue from 'vue';
+import "./public/less/common.css";
+
+import App from './App.vue';
 //引用路由插件
 import VueRouter from 'vue-router'
 //使用路由插件
 Vue.use( VueRouter )
-// console.log( data );
-//引入组件 
-import myCourse from './components/myCourse'
-import collect from './components/collect'
-import allLesson from './components/allLesson'
+
+//引入子组件 
+import myCourse from './components/myCourse.vue'
+import collect from './components/collect.vue'
+import allLesson from './components/allLesson.vue'
 
 const routes = [
     { path: '/', component: myCourse },
@@ -20,11 +22,9 @@ const routes = [
 const router = new VueRouter( {
     routes
 })
-//加载路由规则
+
 new Vue( {
     router,
-    el: '#app1',
-    render: h => h( sideBar )
-})
-
-
+    el: "#app",
+    render: function ( create ) { return create( App ) }
+});

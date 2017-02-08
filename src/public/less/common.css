@@ -182,14 +182,7 @@ img {
   /* -webkit-line-clamp: 2;不能写高度 */
   -webkit-box-orient: vertical;
 }
-/*添加一个伪元素的公共类*/
-.my_element::before {
-  content: '';
-  background: url(../images/icons/jd-sprites.png) 0 0 no-repeat;
-  -webkit-background-size: 200px 200px;
-  /*精灵图的本来宽高是400*/
-  background-size: 200px 200px;
-}
+
 /*行内元素转换并垂直居中  为元素是属于标签的*/
 .my__center,
 .my_center::before {

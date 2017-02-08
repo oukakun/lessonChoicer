@@ -1,8 +1,9 @@
+
 <template>
-    <!--侧边导航栏部分-->
+    <!--侧边导航栏部分-->-
     <div>
         <div class="sidebar">
-            <img src="public/images/logo.png" alt="">
+            <img src="./public/images/logo.png" alt="">
             <h2 class="title">复旦选课助手</h2>
             <ul class="nav">
                 <li class="active">

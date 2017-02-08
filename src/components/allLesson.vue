@@ -40,7 +40,6 @@
     </div>
 </template>
 <script>
-    import vue from './vue.js'
     module.exports = {
         data: function () {
             return {
@@ -52,6 +51,7 @@
                 info: {}
             }
         },
+       
         methods: {
             //alert,点击每一行时触发的方法 ,会弹出一个选择框,添加课程表或者添加到收藏夹
             alert: function ( $event ) {
