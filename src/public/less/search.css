@@ -1,0 +1,185 @@
+.search {
+  transition: all .5s;
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  width: 50pc;
+  margin-left: -25pc;
+  background: #eee;
+  box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+  z-index: 999;
+  height: 50px;
+  padding: 0 20px;
+}
+.search .search_icon i {
+  font-size: 35px;
+  line-height: 50px;
+}
+.search .search_input input {
+  font-size: 30px;
+  background-color: #eeeeee;
+  outline: none;
+  border: none;
+  line-height: 50px;
+  padding: 0 20px;
+}
+.search .search_more {
+  position: relative;
+  padding-left: 16px;
+}
+.search .search_more .fa-angle-down {
+  font-size: 25px;
+  position: absolute;
+  left: 0;
+  top: 13px;
+}
+.search .search_more a {
+  line-height: 50px;
+}
+.search_content {
+  width: 50pc;
+  background-color: #eeeeee;
+  margin-left: -20px;
+  padding: 5px 20px 0;
+  border-top: 1px solid #ccc;
+}
+.search_content h3 {
+  font: 600 20px 微软雅黑;
+}
+.search_content #lessonType {
+  padding: 0 0 20px;
+}
+.search_content #lessonType li {
+  float: left;
+  position: relative;
+  height: 35px;
+  width: 120px;
+  padding: 10px;
+}
+.search_content #lessonType li .fa-square-o {
+  font-size: 25px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+.search_content #lessonType li input {
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+.search_content #lessonType li label {
+  font-size: 16px;
+  margin-left: 15px;
+}
+.search_content .search_lesson_time {
+  width: 50pc;
+  margin-left: -20px;
+  border-top: 1px solid #ccc;
+  padding: 10px 20px;
+}
+.search_content .search_lesson_time .lessonTime {
+  font-size: 16px;
+}
+.search_content .search_lesson_time .lessonTime select {
+  font-size: 16px;
+}
+.search_content .search_lesson_time .lessonTime input {
+  width: 30px;
+  text-align: center;
+  font-size: 16px;
+}
+.search_content .search_lesson_time .fromTime {
+  margin-top: 10px;
+}
+.search_content .search_content_detailed {
+  width: 50pc;
+  margin-left: -20px;
+  border-top: 2px solid #000;
+}
+.search_content .search_content_detailed .lesson_list {
+  height: 300px;
+  width: 50%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.search_content .search_content_detailed .lesson_list li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #777;
+  transition: all .5s;
+}
+.search_content .search_content_detailed .lesson_list li:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  background-color: #fbfbfb;
+}
+.search_content .search_content_detailed .lesson_list li h4 {
+  font: 600 20px 微软雅黑;
+  display: inline-block;
+}
+.search_content .search_content_detailed .lesson_list li span {
+  color: #777777;
+  font-size: 17px;
+  margin-left: 5px;
+}
+.search_content .search_content_detailed .lesson_detailed {
+  margin-left: 50%;
+  padding: 20px;
+  text-align: center;
+}
+.search_content .search_content_detailed .lesson_detailed h3 {
+  font: 900 24px 微软雅黑;
+}
+.search_content .search_content_detailed .lesson_detailed .lesson_info p {
+  padding: 5px;
+}
+.search_content .search_content_detailed .lesson_detailed .lesson_info .lesson_code {
+  font-size: 14px;
+  color: #777;
+}
+.search_content .search_content_detailed .lesson_detailed .lesson_info .lesson_teacher,
+.search_content .search_content_detailed .lesson_detailed .lesson_info .lesson_pleace {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+.search_content .search_content_detailed .lesson_detailed .lesson_info .lesson_student {
+  padding: 0;
+  font-size: 14px;
+  color: #777;
+}
+.search_content .search_content_detailed .lesson_detailed .test_info {
+  padding-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
+.search_content .search_content_detailed .lesson_detailed .lesson_action {
+  padding-top: 5px;
+}
+.search_content .search_content_detailed .lesson_detailed .lesson_action button {
+  width: 100px;
+  height: 26px;
+  background-color: #00ae68;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  font: 500 16px 微软雅黑;
+  line-height: 26px;
+  transition: all .5s;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  margin: 5px;
+}
+.search_content .search_content_detailed .lesson_detailed .lesson_action button:hover {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  background-color: #00c877;
+}
+.search_content .search_content_detailed .lesson_detailed .lesson_action .plus_collection {
+  background-color: #de7d2c;
+}
+.search_content .search_content_detailed .lesson_detailed .lesson_action .plus_collection:hover {
+  background-color: #e18b42;
+}

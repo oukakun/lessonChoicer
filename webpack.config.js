@@ -27,21 +27,22 @@ module.exports = {
                 loader: "style-loader!css-loader!sass-loader!autoprefixer-loader"
             },
             {
-                test: /\.(jpg|png)$/,
+                test: /\.(jpg|png|ttf)$/,
                 loader: "url-loader?limit=40000"
             },
             {
                 test: /\.vue$/,
-                loader: "vue"
+                loader: "vue-loader"
             }
         ]
     },
     plugins: [new htmlWebpackPlugin( {
         title: "index",
         filename: "index.html",
-        template: "index1.html"
+        template: "index1.html",
+        babel: {
+            presets: ["es2015"]
+        }
     })],
-    babel: {
-        presets: ["es2015"]
-    },
+
 }

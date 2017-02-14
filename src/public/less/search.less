@@ -1,0 +1,193 @@
+// 搜索部分
+.search {
+    transition: all .5s;
+    position: fixed;
+    left: 50%;
+    top: 10%;
+    width: 50pc;
+    margin-left: -25pc;
+    background: #eee;
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, .2), 0 40px 77px 0 rgba(0, 0, 0, .22);
+    border-radius: 10px;
+    z-index: 999;
+    height: 50px;
+    padding: 0 20px;
+    .search_icon {
+        i {
+            font-size: 35px;
+            line-height: 50px;
+        }
+    }
+    .search_input {
+        input {
+            font-size: 30px;
+            background-color: #eeeeee;
+            outline: none;
+            border: none;
+            line-height: 50px;
+            padding: 0 20px;
+        }
+    }
+    .search_more {
+        position: relative;
+        padding-left: 16px;
+        .fa-angle-down {
+            font-size: 25px;
+            position: absolute;
+            left: 0;
+            top: 13px;
+        }
+        a {
+            line-height: 50px;
+        }
+    }
+}
+
+.search_content {
+    width: 50pc;
+    background-color: #eeeeee;
+    margin-left: -20px;
+    padding: 5px 20px 0;
+    border-top: 1px solid #ccc;
+    h3 {
+        font: 600 20px 微软雅黑;
+    }
+    #lessonType {
+        padding: 0 0 20px;
+        li {
+            float: left;
+            position: relative;
+            height: 35px;
+            width: 120px;
+            padding: 10px;
+            .fa-square-o {
+                font-size: 25px;
+                position: absolute;
+                left: 0;
+                top: 10px;
+            }
+            input {
+                opacity: 0;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                left: 0;
+                top: 10px;
+            }
+            label {
+                font-size: 16px;
+                margin-left: 15px;
+            }
+        }
+    }
+    .search_lesson_time {
+        width: 50pc;
+        margin-left: -20px;
+        border-top: 1px solid #ccc;
+        padding: 10px 20px;
+        .lessonTime {
+            font-size: 16px;
+            select {
+                font-size: 16px;
+            }
+            input {
+                width: 30px;
+                text-align: center;
+                font-size: 16px;
+            }
+        }
+        .fromTime {
+            margin-top: 10px;
+        }
+    }
+    .search_content_detailed {
+        width: 50pc;
+        margin-left: -20px;
+        border-top: 2px solid #000;
+        .lesson_list {
+            height: 300px;
+            width: 50%;
+            overflow: hidden;
+            overflow-y: auto;
+            li {
+                padding: 10px 20px;
+                border-bottom: 1px solid #777;
+                transition: all .5s;
+                &:hover {
+                    box-shadow: 0 0 8px rgba(0, 0, 0, .5);
+                    background-color: #fbfbfb;
+                }
+                h4 {
+                    font: 600 20px 微软雅黑;
+                    display: inline-block;
+                }
+                span {
+                    color: #777777;
+                    font-size: 17px;
+                    margin-left: 5px;
+                }
+            }
+        }
+        .lesson_detailed {
+            margin-left: 50%;
+            padding: 20px;
+            text-align: center;
+            h3 {
+                font: 900 24px 微软雅黑;
+            }
+            .lesson_info {
+                p {
+                    padding: 5px;
+                }
+                .lesson_code {
+                    font-size: 14px;
+                    color: #777;
+                }
+                .lesson_teacher,
+                .lesson_pleace {
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #000;
+                }
+                .lesson_student {
+                    padding: 0;
+                    font-size: 14px;
+                    color: #777;
+                }
+            }
+            .test_info {
+                padding-top: 20px;
+                font-size: 14px;
+                color: #777;
+            }
+            .lesson_action {
+                padding-top: 5px;
+                button {
+                    width: 100px;
+                    height: 26px;
+                    background-color: #00ae68;
+                    border: none;
+                    outline: none;
+                    color: #fff;
+                    border-radius: 5px;
+                    font: 500 16px 微软雅黑;
+                    line-height: 26px;
+                    transition: all .5s;
+                    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+                    margin: 5px;
+                    &:hover {
+                        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+                        cursor: pointer;
+                        background-color: #00c877;
+                    }
+                }
+                .plus_collection {
+                    background-color: #de7d2c;
+                    &:hover {
+                        background-color: #e18b42;
+                    }
+                }
+            }
+        }
+    }
+}

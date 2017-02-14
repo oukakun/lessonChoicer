@@ -13,7 +13,8 @@ import collect from './components/collect.vue'
 import allLesson from './components/allLesson.vue'
 
 const routes = [
-    { path: '/', component: myCourse },
+    { path: '/', redirect: '/home' },
+    { path: '/home', component: myCourse },
     { path: '/collect/', component: collect },
     { path: '/allLesson/', component: allLesson }
 ]
