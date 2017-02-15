@@ -5,37 +5,25 @@
             <img src="./public/images/logo.png" alt="">
             <h2 class="title">选课助手</h2>
             <ul class="nav">
-                <li v-on:click="judgeHash">
-                    <i class="fa fa-table fl" :class="{active:isIndex}"></i>
-                    <router-link to="/home" :class="{navName:true,active:isIndex}">我的课表</router-link>
-                </li>
-                <li v-on:click="judgeHash">
-                    <i class="fa fa-star-o fl" :class="{active:isCollect}"></i>
-                    <router-link to="/collect" :class="{navName:true,active:isCollect}">收藏夹</router-link>
-                </li>
-                <li v-on:click="alertSearch">
-                    <i class="fa fa-search fl"></i>
-                    <a href="javascript:;" :class="{navName:true}">搜索</a>
-                </li>
-                <li v-on:click="judgeHash">
-                    <i class="fa fa-list-alt fl" :class="{active:isAllLesson}"></i>
-                    <router-link to="/allLesson" :class="{navName:true,active:isAllLesson}">所有课程</router-link>
+                <li v-for="(item, index) in items" v-on:click="choose(index)" :class="{'active':i==index , 'hover':i!=index}">
+                    <i :class="item.iconClass"></i>
+                    <router-link :to="item.hash" class="navName">{{item.text}}</router-link>
                 </li>
             </ul>
         </div>
         <!--搜索部分-->
-        <div class="search" :class="{animated:true,fadeInDownBig:isShow,fadeOutUpBig:!isShow,hidden:isShow}">
+        <div class="search" v-show="firstLord" :class="{animated:true,fadeInDownBig:isShow,fadeOutUpBig:!isShow,hidden:isShow}">
             <div class="search_icon fl">
                 <i class="fa fa-search"></i>
             </div>
-            <div class="search_more fr">
+            <div class="search_more fr" v-on:click="showMore">
                 <i class="fa fa-angle-down"></i>
                 <a href="###">更多条件</a>
             </div>
             <div class="search_input">
                 <input type="text" placeholder="课程名称/选课号/教师姓名">
             </div>
-            <div class="search_content">
+            <div class="search_content" v-show="search_more">
                 <h3>限定类别</h3>
                 <form id="lessonType">
                     <ul class="clearfix">
@@ -125,7 +113,7 @@
                         <input type="text"> 节课
                     </div>
                 </div>
-                <div class="search_content_detailed clearfix">
+                <div class="search_content_detailed clearfix" v-show="search_lesson">
                     <div class="lesson_list fl">
                         <ul>
                             <li>
@@ -180,7 +168,10 @@
                 </div>
             </div>
         </div>
-        <router-view class="view" keep-alive transition transition-mode="out-in"> </router-view>
+        <!--组件展示-->
+        <div v-on:click="closeSearch">
+            <router-view class="view" keep-alive transition transition-mode="out-in" v-on:click="closeSearch"> </router-view>
+        </div>
     </div>
 </template>
 <script>
@@ -195,38 +186,54 @@
         data: function () {
             return {
                 course: COURSE_DATA,
-                isIndex: true,
-                isCollect: false,
-                isAllLesson: false,
-                isShow: false
+                //首次加载
+                firstLord: false,
+                //搜索菜单
+                isShow: false,
+                //更多搜索条件
+                search_more: false,
+                //搜索课程
+                search_lesson: false,
+                items: [ {
+                        iconClass: "fa fa-table fl",
+                        hash: "/home",
+                        text: "我的课表"
+                    },
+                    {
+                        iconClass: "fa fa-star-o fl",
+                        hash: "/collect",
+                        text: "收藏夹"
+                    },
+                    {
+                        iconClass: "fa fa-search fl",
+                        hash: "",
+                        text: "搜索"
+                    },
+                    {
+                        iconClass: "fa fa-list-alt fl",
+                        hash: "/allLesson",
+                        text: "所有课程"
+                    }
+                ],
+                i: '0'
             }
         },
         methods: {
-            judgeHash: function () {
-                if ( location.hash == '#/home' ) {
-                    this.isCollect = false;
-                    this.isAllLesson = false;
-                    this.isIndex = true;
-                };
-                if ( location.hash == '#/collect' ) {
-                    this.isCollect = true;
-                    this.isAllLesson = false;
-                    this.isIndex = false;
-                };
-                if ( location.hash == '#/allLesson' ) {
-                    this.isCollect = false;
-                    this.isAllLesson = true;
-                    this.isIndex = false;
-                };
+            choose: function ( index ) {
+                if ( index != 2 ) {
+                    this.i = index;
+                    this.isShow = false;
+                } else {
+                    this.firstLord = true;
+                    ( this.isShow == false ) ? this.isShow = true: this.isShow = false;
+                }
 
             },
-            alertSearch: function () {
-                if ( this.isShow == false ) {
-                    this.isShow = true;
-
-                } else {
-                    this.isShow = false;
-                }
+            closeSearch: function () {
+                this.isShow = false;
+            },
+            showMore: function () {
+                ( this.search_more == false ) ? this.search_more = true: this.search_more = false;
             }
         }
     }

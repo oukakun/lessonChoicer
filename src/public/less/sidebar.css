@@ -2,6 +2,15 @@
   background-color: #fff;
   color: #54555a!important;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3) inset;
+  transition: all .5s;
+}
+.active a {
+  color: #54555a!important;
+}
+.hover:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all .5s;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.3);
 }
 .sidebar {
   width: 200px;

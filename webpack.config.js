@@ -22,10 +22,7 @@ module.exports = {
                 test: /\.less$/,
                 loader: "style-loader!css-loader!less-loader!autoprefixer-loader"
             },
-            {
-                test: /\.scss$/,
-                loader: "style-loader!css-loader!sass-loader!autoprefixer-loader"
-            },
+
             {
                 test: /\.(jpg|png|ttf)$/,
                 loader: "url-loader?limit=40000"
