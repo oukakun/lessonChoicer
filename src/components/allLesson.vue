@@ -51,7 +51,7 @@
                 info: {}
             }
         },
-       
+
         methods: {
             //alert,点击每一行时触发的方法 ,会弹出一个选择框,添加课程表或者添加到收藏夹
             alert: function ( $event ) {
@@ -65,7 +65,7 @@
                     for ( i = 0; i < children.length; i++ ) {
                         if ( i == 0 ) {
                             data = children[ 0 ].innerText
-                                //将json字符串转换成json对象，得到我们要的数据
+                            //将json字符串转换成json对象，得到我们要的数据
                             data = JSON.parse( data );
                             this.info = data;
                         }
@@ -87,6 +87,7 @@
                 };
                 add.info = this.info;
                 $.cookie( 'addLesson' + this.info[ '选课序号' ], JSON.stringify( add ) );
+                console.log( this.info[ '选课序号' ] )
                 this.isHide = true;
             },
             //addCollect,点击添加数据到收藏夹页面中
@@ -107,6 +108,7 @@
                 }
             },
             disable: function () {
+                console.log( this.info[ '选课序号' ] );
                 if ( $.cookie( 'addCollect' + this.info[ '选课序号' ] ) ) {
                     return false;
                 } else {

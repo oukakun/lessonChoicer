@@ -215,7 +215,14 @@
                         text: "所有课程"
                     }
                 ],
-                i: '0'
+                i: 0
+            }
+        },
+        created: function () {
+            if ( window.location.hash == "#/collect" ) {
+                this.i = 1;
+            } else if ( window.location.hash == "#/allLesson" ) {
+                this.i = 3;
             }
         },
         methods: {
@@ -226,6 +233,15 @@
                 } else {
                     this.firstLord = true;
                     ( this.isShow == false ) ? this.isShow = true: this.isShow = false;
+
+                    //获取cookie数据
+                    for ( var key in $.cookie() ) {
+                        console.log( key );
+                        console.log( $.cookie( key ) );
+
+                    }
+
+
                 }
 
             },

@@ -65,6 +65,9 @@
   font-size: 15px;
 }
 .alllesson .lessonInfo table td .add {
+  background-color: green;
+}
+.alllesson .lessonInfo table td .addAlready {
   background-color: #aaa;
 }
 .alllesson .lessonInfo table td .remove {
